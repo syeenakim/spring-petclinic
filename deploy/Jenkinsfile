@@ -1,1 +1,30 @@
-.
+pipeline {
+    agent any
+    
+    tools {
+        maven 'M3'
+        jdk 'JDK11'
+    }
+    
+    stages {
+        stage('Git init') {
+            steps {
+                echo 'Git Init'
+                git url:'https://github.com/syeenakim/spring-petclinic.git/',
+                branch:'main', credentialsId: 'gitCredentials'
+            }
+        }
+        stage('Build') {
+            steps {
+                echo 'Build'
+                sh 'mvn -Dmaven.test.failure.ignore=true clean package'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploy'
+                
+            }
+        }
+    }
+}
