@@ -39,8 +39,7 @@ pipeline {
                 removePrefix: 'target', 
                 sourceFiles: 'target/*.jar')], 
                 usePromotionTimestamp: false, 
-                useWorkspaceInPromotion: false, verbose: false)])
-            } 
+                useWorkspaceInPromotion: false, verbose: false)]) 
             }
         }
     }
