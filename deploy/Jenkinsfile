@@ -54,7 +54,6 @@ pipeline {
         stage ('Code Deploy') {
                steps {
                    echo 'Code Deploy'
-            }
         }
     }
 }
