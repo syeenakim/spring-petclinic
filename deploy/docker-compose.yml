@@ -1,0 +1,7 @@
+version: '3.9'
+services:
+  project03-spring-petclinic:
+    image: ${IMAGE}:${TAG}
+    container_name: project00-spring-petclinic
+    ports:
+      - "8080:8080"
