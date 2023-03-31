@@ -82,8 +82,7 @@ pipeline {
                     sh 'rm -rf ./deploy-1.0.zip'
                 }
             }
-        }
-        
+                
             steps {
                 echo "create application"
                 sh 'aws deploy create-application --application-name project04'
