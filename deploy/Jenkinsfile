@@ -18,7 +18,7 @@ pipeline {
     stages {
         stage('Git clone') {
             steps {
-                git url: 'https://github.com/syeenakim/spring-petclinic.git', branch: 'main', credentialsId: 'syeenakim'
+                git url: 'https://github.com/syeenakim/spring-petclinic.git', branch: 'main', credentialsId: 'project04'
             }
             post {
                 success {
