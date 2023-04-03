@@ -106,6 +106,7 @@ pipeline {
                     --s3-location bucket=project04-codeproject,bundleType=zip,key=deploy-1.0.zip
                     '''
                     sleep(10) // sleep 10s
+                }
             }
         }        
     }
