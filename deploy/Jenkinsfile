@@ -14,7 +14,8 @@ pipeline {
         ECR_REPOSITORY = "${AWS_ACCOUNT_ID}.dkr.ecr.ap-northeast-2.amazonaws.com"
         ECR_DOCKER_IMAGE = "${ECR_REPOSITORY}/${DOCKER_IMAGE_NAME}"
         ECR_DOCKER_TAG = "${DOCKER_TAG}"
-
+    }
+    
     stages {
         stage('Git clone') {
             steps {
@@ -106,7 +107,7 @@ pipeline {
                     --s3-location bucket=project04-codeproject,bundleType=zip,key=deploy-1.0.zip
                     '''
                     sleep(10) // sleep 10s
-                }
+                
             }
         }        
     }
