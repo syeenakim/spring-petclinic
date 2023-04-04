@@ -104,7 +104,7 @@ pipeline {
                     aws deploy create-deployment --application-name project04 \
                     --deployment-config-name CodeDeployDefault.OneAtATime \
                     --deployment-group-name project04-code-deploy \
-                    --s3-location bucket=project04-codeproject,bundleType=zip,key=deploy-1.0.zip
+                    --s3-location bucket=project04-codedeploy,bundleType=zip,key=deploy-1.0.zip
                     '''
                     sleep(10) // sleep 10s
                 
